@@ -96,9 +96,16 @@ jobs:
         if: steps.release.outputs.new_release == 'true'
         uses: azure/setup-helm@v4
 
+      - name: Configure Git
+        if: steps.release.outputs.new_release == 'true'
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
       - if: steps.release.outputs.new_release == 'true'
         uses: helm/chart-releaser-action@v1.7.0
         with:
           charts_dir: chart
+          skip_existing: true
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
