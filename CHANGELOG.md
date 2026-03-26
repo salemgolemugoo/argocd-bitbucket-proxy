@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/compare/v1.0.1...v1.0.2) (2026-03-26)
+
+
+### Bug Fixes
+
+* **ci:** configure git identity for helm chart-releaser action ([#3](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/issues/3)) ([66dcd62](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/66dcd625abc108b6133b1391bb773d3b6cdb4a5b))
+
 ## [1.0.1](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/compare/v1.0.0...v1.0.1) (2026-03-26)
 
 
