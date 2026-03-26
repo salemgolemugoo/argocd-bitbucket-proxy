@@ -1,0 +1,11 @@
+services:
+  proxy:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      ARGOCD_WEBHOOK_URL: "http://argocd-applicationset-controller.argocd.svc.cluster.local:7000/api/webhook"
+      BITBUCKET_SERVER_SECRET: "test-secret"
+      BITBUCKET_CLOUD_SECRET: "test-secret"
+      LOG_LEVEL: "debug"
