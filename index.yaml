@@ -1,0 +1,33 @@
+apiVersion: v1
+entries:
+  argocd-bitbucket-proxy:
+  - annotations:
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: GitHub
+          url: https://github.com/salemgolemugoo/argocd-bitbucket-proxy
+        - name: ArgoCD PR
+          url: https://github.com/argoproj/argo-cd/pull/15443
+    apiVersion: v2
+    appVersion: 1.0.2
+    created: "2026-03-26T22:31:30.092644465Z"
+    description: Proxy that translates Bitbucket webhooks to GitHub format for ArgoCD
+      ApplicationSet
+    digest: 298c9e832be14b64b5b12ad0be90374b87eb89aed715dabee674c14005ad011e
+    home: https://github.com/salemgolemugoo/argocd-bitbucket-proxy
+    keywords:
+    - argocd
+    - bitbucket
+    - webhook
+    - proxy
+    - applicationset
+    maintainers:
+    - name: salemgolemugoo
+    name: argocd-bitbucket-proxy
+    sources:
+    - https://github.com/salemgolemugoo/argocd-bitbucket-proxy
+    type: application
+    urls:
+    - https://github.com/salemgolemugoo/argocd-bitbucket-proxy/releases/download/argocd-bitbucket-proxy-1.0.2/argocd-bitbucket-proxy-1.0.2.tgz
+    version: 1.0.2
+generated: "2026-03-26T22:31:30.092650697Z"
