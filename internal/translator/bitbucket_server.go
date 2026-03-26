@@ -3,6 +3,7 @@ package translator
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
 )
 
 func IsBitbucketServer(body []byte) bool {
@@ -14,11 +15,25 @@ func IsBitbucketServer(body []byte) bool {
 				Key string `json:"key"`
 			} `json:"project"`
 		} `json:"repository"`
+		PullRequest struct {
+			ID uint64 `json:"id"`
+		} `json:"pullRequest"`
 	}
 	if err := json.Unmarshal(body, &probe); err != nil {
 		return false
 	}
-	return probe.EventKey != "" && probe.Repository.Slug != "" && probe.Repository.Project.Key != ""
+	if probe.EventKey == "" {
+		return false
+	}
+	// Push events have top-level repository with slug and project key
+	if probe.Repository.Slug != "" && probe.Repository.Project.Key != "" {
+		return true
+	}
+	// PR events have eventKey starting with "pr:" and a pullRequest object
+	if strings.HasPrefix(probe.EventKey, "pr:") && probe.PullRequest.ID > 0 {
+		return true
+	}
+	return false
 }
 
 func TranslateBitbucketServerPush(body []byte) (string, interface{}, error) {
