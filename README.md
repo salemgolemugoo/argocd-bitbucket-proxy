@@ -1,5 +1,7 @@
 # argocd-bitbucket-proxy
 
+[![CI](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/actions/workflows/ci.yaml/badge.svg)](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/actions/workflows/ci.yaml)
+
 A lightweight proxy that translates Bitbucket Server and Bitbucket Cloud webhook payloads into GitHub webhook format, enabling ArgoCD ApplicationSet webhook support for Bitbucket.
 
 This is a temporary workaround until [argoproj/argo-cd#15443](https://github.com/argoproj/argo-cd/pull/15443) is merged.
@@ -45,7 +47,7 @@ helm install argocd-bitbucket-proxy chart/argocd-bitbucket-proxy/ \
 ```bash
 docker run -p 8080:8080 \
   -e BITBUCKET_SERVER_SECRET=your-secret \
-  ghcr.io/ilmakiage/argocd-bitbucket-proxy:latest
+  ghcr.io/salemgolemugoo/argocd-bitbucket-proxy:latest
 ```
 
 ## Supported Events
