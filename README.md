@@ -1,6 +1,7 @@
 # argocd-bitbucket-proxy
 
 [![CI](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/actions/workflows/ci.yaml/badge.svg)](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/actions/workflows/ci.yaml)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/argocd-bitbucket-proxy)](https://artifacthub.io/packages/search?repo=argocd-bitbucket-proxy)
 
 A lightweight proxy that translates Bitbucket Server and Bitbucket Cloud webhook payloads into GitHub webhook format, enabling ArgoCD ApplicationSet webhook support for Bitbucket.
 
