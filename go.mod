@@ -1,3 +1,3 @@
-module github.com/ilmakiage/argocd-bitbucket-proxy
+module github.com/salemgolemugoo/argocd-bitbucket-proxy
 
 go 1.26.1

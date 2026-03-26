@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ilmakiage/argocd-bitbucket-proxy/internal/config"
+	"github.com/salemgolemugoo/argocd-bitbucket-proxy/internal/config"
 )
 
 func sign(body []byte, secret string) string {

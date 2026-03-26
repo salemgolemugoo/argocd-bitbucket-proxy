@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/ilmakiage/argocd-bitbucket-proxy/internal/config"
-	"github.com/ilmakiage/argocd-bitbucket-proxy/internal/server"
+	"github.com/salemgolemugoo/argocd-bitbucket-proxy/internal/config"
+	"github.com/salemgolemugoo/argocd-bitbucket-proxy/internal/server"
 )
 
 func main() {

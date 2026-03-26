@@ -6,10 +6,10 @@ import (
 	"log/slog"
 	"net/http"
 
-	"github.com/ilmakiage/argocd-bitbucket-proxy/internal/config"
-	"github.com/ilmakiage/argocd-bitbucket-proxy/internal/forwarder"
-	"github.com/ilmakiage/argocd-bitbucket-proxy/internal/translator"
-	"github.com/ilmakiage/argocd-bitbucket-proxy/internal/validator"
+	"github.com/salemgolemugoo/argocd-bitbucket-proxy/internal/config"
+	"github.com/salemgolemugoo/argocd-bitbucket-proxy/internal/forwarder"
+	"github.com/salemgolemugoo/argocd-bitbucket-proxy/internal/translator"
+	"github.com/salemgolemugoo/argocd-bitbucket-proxy/internal/validator"
 )
 
 type Server struct {
