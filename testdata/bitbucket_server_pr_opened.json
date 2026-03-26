@@ -1,0 +1,36 @@
+{
+  "eventKey": "pr:opened",
+  "date": "2024-01-15T10:30:00+0000",
+  "actor": {"name": "admin", "emailAddress": "admin@example.com", "displayName": "Admin"},
+  "pullRequest": {
+    "id": 42,
+    "title": "Add feature X",
+    "state": "OPEN",
+    "open": true,
+    "closed": false,
+    "fromRef": {
+      "id": "refs/heads/feature/x",
+      "displayId": "feature/x",
+      "repository": {
+        "slug": "my-repo", "name": "My Repo",
+        "project": {"key": "PROJ", "name": "My Project"},
+        "links": {
+          "clone": [{"href": "https://bitbucket.example.com/scm/proj/my-repo.git", "name": "http"}, {"href": "ssh://git@bitbucket.example.com:7999/proj/my-repo.git", "name": "ssh"}],
+          "self": [{"href": "https://bitbucket.example.com/projects/PROJ/repos/my-repo/browse"}]
+        }
+      }
+    },
+    "toRef": {
+      "id": "refs/heads/main",
+      "displayId": "main",
+      "repository": {
+        "slug": "my-repo", "name": "My Repo",
+        "project": {"key": "PROJ", "name": "My Project"},
+        "links": {
+          "clone": [{"href": "https://bitbucket.example.com/scm/proj/my-repo.git", "name": "http"}, {"href": "ssh://git@bitbucket.example.com:7999/proj/my-repo.git", "name": "ssh"}],
+          "self": [{"href": "https://bitbucket.example.com/projects/PROJ/repos/my-repo/browse"}]
+        }
+      }
+    }
+  }
+}
