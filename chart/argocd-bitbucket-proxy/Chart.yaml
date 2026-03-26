@@ -1,0 +1,6 @@
+apiVersion: v2
+name: argocd-bitbucket-proxy
+description: Proxy that translates Bitbucket webhooks to GitHub format for ArgoCD ApplicationSet
+version: 0.1.0
+appVersion: "0.1.0"
+type: application

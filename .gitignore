@@ -1,5 +1,5 @@
 # Binaries
-argocd-bitbucket-proxy
+/argocd-bitbucket-proxy
 *.exe
 *.dll
 *.so
