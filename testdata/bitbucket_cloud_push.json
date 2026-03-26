@@ -1,0 +1,14 @@
+{
+  "repository": {
+    "full_name": "myworkspace/my-repo",
+    "name": "my-repo",
+    "links": {"html": {"href": "https://bitbucket.org/myworkspace/my-repo"}},
+    "owner": {"nickname": "myworkspace"}
+  },
+  "push": {
+    "changes": [{
+      "new": {"type": "branch", "name": "main", "target": {"hash": "abc123def456"}},
+      "old": {"type": "branch", "name": "main", "target": {"hash": "000111222333"}}
+    }]
+  }
+}
