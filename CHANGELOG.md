@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/compare/v1.0.0...v1.0.1) (2026-03-26)
+
+
+### Bug Fixes
+
+* **asdf:** upgraded tool versions ([#1](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/issues/1)) ([0b326f3](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/0b326f3ce5d11a3a2595925de417b22776a0790d))
+* **helm:** changed chart license ([#2](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/issues/2)) ([35523a1](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/35523a1701c9c7843375792cd64eb54ccbde1983))
+
 # 1.0.0 (2026-03-26)
 
 
