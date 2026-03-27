@@ -1,3 +1,13 @@
+# [1.1.0](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/compare/v1.0.2...v1.1.0) (2026-03-27)
+
+
+### Features
+
+* **chart:** add gateway template ([148d0c1](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/148d0c15a4e46e0584ce98b36bc0b9c6579fdb47))
+* **chart:** add httproute template ([0bfbc2d](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/0bfbc2d20759f9ff0cfab4b7370cd594be8ffbdf))
+* **chart:** add ingress and gateway API values ([1050d71](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/1050d712cbf34efd0597d32e937ae0dd977647fe))
+* **chart:** add ingress template ([0b53f7b](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/0b53f7b5012a91838624528ec28a87457cd315d5))
+
 ## [1.0.2](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/compare/v1.0.1...v1.0.2) (2026-03-26)
 
 
