@@ -62,6 +62,20 @@ func TestWebhook_MissingEventKey(t *testing.T) {
 	}
 }
 
+func TestWebhook_TrailingSlash(t *testing.T) {
+	cfg := &config.Config{BitbucketServerSecret: "s"}
+	srv := New(cfg, "http://localhost:9999")
+	handler := srv.Handler()
+
+	req := httptest.NewRequest(http.MethodPost, "/webhook/", strings.NewReader(`{}`))
+	w := httptest.NewRecorder()
+	handler.ServeHTTP(w, req)
+
+	if w.Code == http.StatusNotFound {
+		t.Errorf("POST /webhook/ should not return 404, got %d", w.Code)
+	}
+}
+
 func TestWebhook_InvalidSignature(t *testing.T) {
 	cfg := &config.Config{BitbucketServerSecret: "correct-secret"}
 	srv := New(cfg, "http://localhost:9999")
