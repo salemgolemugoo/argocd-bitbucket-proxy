@@ -1,0 +1,24 @@
+{{- if and .Values.gateway.enabled .Values.gateway.create -}}
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: {{ include "argocd-bitbucket-proxy.fullname" . }}
+  labels:
+    {{- include "argocd-bitbucket-proxy.labels" . | nindent 4 }}
+spec:
+  gatewayClassName: {{ .Values.gateway.gatewayClassName }}
+  listeners:
+    {{- range .Values.gateway.listeners }}
+    - name: {{ .name }}
+      protocol: {{ .protocol }}
+      port: {{ .port }}
+      {{- with .tls }}
+      tls:
+        mode: {{ .mode }}
+        {{- with .certificateRefs }}
+        certificateRefs:
+          {{- toYaml . | nindent 10 }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+{{- end }}
