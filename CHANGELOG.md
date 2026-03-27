@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/compare/v1.1.0...v1.1.1) (2026-03-27)
+
+
+### Bug Fixes
+
+* handle trailing slash on webhook endpoint ([db31d8a](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/commit/db31d8a4b486e49fa0c645aa143bbf0cdf941d81))
+
 # [1.1.0](https://github.com/salemgolemugoo/argocd-bitbucket-proxy/compare/v1.0.2...v1.1.0) (2026-03-27)
 
 
