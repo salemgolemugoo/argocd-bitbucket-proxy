@@ -45,3 +45,62 @@ nodeSelector: {}
 tolerations: []
 # -- Affinity rules for pod scheduling
 affinity: {}
+
+# -- Ingress configuration for external access
+ingress:
+  # -- Enable ingress resource
+  enabled: false
+  # -- Ingress class name
+  className: alb
+  # -- Annotations for the ingress resource
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: "443"
+  # -- Ingress host configuration
+  hosts:
+    - host: argocd-bitbucket-proxy.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  # -- TLS configuration
+  tls: []
+  #  - secretName: argocd-bitbucket-proxy-tls
+  #    hosts:
+  #      - argocd-bitbucket-proxy.example.com
+
+# -- Gateway API configuration for external access
+gateway:
+  # -- Enable Gateway API resources
+  enabled: false
+  # -- Create a Gateway resource (set to false to use an existing Gateway)
+  create: true
+  # -- Gateway class name (used when create is true)
+  gatewayClassName: amazon-vpc-lattice
+  # -- Gateway listeners (used when create is true)
+  listeners:
+    - name: https
+      protocol: HTTPS
+      port: 443
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - name: argocd-bitbucket-proxy-tls
+  # -- Reference to an existing Gateway (used when create is false)
+  gatewayRef:
+    # -- Name of the existing Gateway
+    name: ""
+    # -- Namespace of the existing Gateway (defaults to release namespace)
+    namespace: ""
+  # -- HTTPRoute configuration
+  httpRoute:
+    # -- Hostnames for the HTTPRoute
+    hostnames:
+      - argocd-bitbucket-proxy.example.com
+    # -- Routing rules
+    rules:
+      - matches:
+          - path:
+              type: PathPrefix
+              value: /
