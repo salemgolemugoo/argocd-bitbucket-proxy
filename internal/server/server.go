@@ -29,6 +29,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /healthz", s.handleHealthz)
 	mux.HandleFunc("GET /readyz", s.handleReadyz)
 	mux.HandleFunc("POST /webhook", s.handleWebhook)
+	mux.HandleFunc("POST /webhook/", s.handleWebhook)
 	return mux
 }
 
